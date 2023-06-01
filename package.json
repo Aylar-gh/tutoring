@@ -1,0 +1,24 @@
+{
+  "name": "tutoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hi": "node script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aylar-gh/tutoring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aylar-gh/tutoring/issues"
+  },
+  "homepage": "https://github.com/Aylar-gh/tutoring#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
