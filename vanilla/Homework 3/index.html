@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Box Checker</title>
+  <style>
+    .box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid black;
+    display: none;
+  }
+
+  .green-box {
+    background-color: green;
+  }
+
+  .red-box {
+    background-color: red;
+  }
+
+  .display {
+    display: block;
+  }
+  </style>
+</head>
+<body>
+  <input id="myinput" type="text" />
+  <button id="btn">Check</button>
+  <div class="box red-box"></div>
+  <div class="box green-box"></div>
+
+  <script>
+    function application(word) {
+      return {
+        check: function() {
+          const inputValue = document.getElementById('myinput').value;
+          return inputValue === word;
+        }
+      };
+    }
+
+    const myApp = application('show');
+
+    document.getElementById('btn').addEventListener('click', function() {
+      setTimeout(function() {
+        const result = myApp.check();
+        if (result) {
+          document.getElementsByClassName('green-box')[0].classList.add('display');
+          document.getElementsByClassName('red-box')[0].classList.remove('display');
+        } else {
+          document.getElementsByClassName('red-box')[0].classList.add('display');
+          document.getElementsByClassName('green-box')[0].classList.remove('display');
+        }
+        console.log(`checked against 'show' and the result was ${result}`);
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
+
+
